@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://wuluknut.com/sitemap.xml
