@@ -1,0 +1,111 @@
+title = "乌鲁克努特"
+baseurl = "https://wuluknut.com"
+copyright = "Wulu Knut"
+
+paginate = 5
+hasCJKLanguage = true
+defaultContentLanguage = "zh-cn"
+languageCode = "zh-cn"
+
+theme = "hugo-theme-stack"
+
+googleAnalytics = "G-WS8438Z2EL"
+
+[permalinks]
+  post = "/post/:slug/"
+  page = "/:slug/"
+
+[params]
+  mainSections = ["post"]
+  favicon = "/favicon.png"
+
+  [params.footer]
+    since = 2024
+
+  [params.dateFormat]
+    published = "2006-01-02"
+    lastUpdated = "2006-01-02"
+
+  [params.sidebar]
+    subtitle = "不予愚辩，保持内心之宁静。"
+
+  [params.article]
+    math = true
+    [params.article.license]
+      enabled = true
+
+  [params.comments]
+    enabled = true
+    provider = "utterances"
+
+    [params.comments.utterances]
+      repo = "wuluknut/wuluknut.github.io"
+      label = "comment"
+
+  [params.widgets]
+    [[params.widgets.homepage]]
+      type = "search"
+
+    [[params.widgets.homepage]]
+      type = "archives"
+      [params.widgets.homepage.params]
+        limit = 5
+
+    [[params.widgets.homepage]]
+      type = "categories"
+      [params.widgets.homepage.params]
+        limit = 10
+
+    [[params.widgets.homepage]]
+      type = "tag-cloud"
+      [params.widgets.homepage.params]
+        limit = 25
+
+    [[params.widgets.page]]
+      type = "toc"
+
+[menu]
+  [[menu.social]]
+    identifier = "github"
+    name = "GitHub"
+    url = "https://github.com/wuluknut"
+    [menu.social.params]
+      icon = "brand-github"
+
+  [[menu.social]]
+    identifier = "twitter"
+    name = "Twitter"
+    url = "https://twitter.com/wuluknut"
+    [menu.social.params]
+      icon = "brand-twitter"
+
+[related]
+  includeNewer = true
+  threshold = 60
+  toLower = false
+
+  [[related.indices]]
+    name = "tags"
+    weight = 100
+
+  [[related.indices]]
+    name = "categories"
+    weight = 200
+
+[markup]
+  [markup.goldmark.renderer]
+    unsafe = true
+
+  [markup.tableOfContents]
+    endLevel = 4
+    ordered = true
+    startLevel = 2
+
+  [markup.highlight]
+    noClasses = false
+    codeFences = true
+    guessSyntax = true
+    lineNoStart = 1
+    lineNos = true
+    lineNumbersInTable = true
+    tabWidth = 4
